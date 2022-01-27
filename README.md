@@ -27,6 +27,7 @@
  >   * C++
  > * What will be the input/output of your project? What are the features that the project provides?
  >   * The input will consist of a user selecting different options of what they want to do in the game including attack, run, access inventory, use a heal item, quit game, etc. The output of the game will have texts that reflect what the user selects along with a story that follows with what the user selects.
+ >   * The features that the game provides include a menu that allows the user to select what to do in game and an engaging and choice-driven story.
  > 
  > This description should be in enough detail that the TA/instructor can determine the complexity of the project and if it is sufficient for the team members to complete in the time allotted. 
  > 
