@@ -24,7 +24,7 @@
  > * Why is it important or interesting to you?
  >   * This project is important to us because it allows us to further explore and strengthen many fundamental data structures, algorithm, and system design skills in a fun and interactive way through various design patterns. Creating a text-based RPG in C++ allows us to not only formulate how to design and integrate many different moving pieces together, but it also allows us to create our own narrative and express ourselves creatively which is why this project is also so interesting to us.
  > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
- >   * [toolname](link) - Short description
+ >   * C++
  > * What will be the input/output of your project? What are the features that the project provides?
  >   * The input will consist of a user selecting different options of what they want to do in the game including attack, run, access inventory, use a heal item, quit game, etc. The output of the game will have texts that reflect what the user selects along with a story that follows with what the user selects.
  > 
