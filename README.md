@@ -48,7 +48,6 @@
  > ![Rogue Origins UML Class Diagram](https://cdn.discordapp.com/attachments/935084367720624168/941198198486216754/unknown.png)
  > **Class Diagram Description:**
  > The project's goal is to set a text-based RPG set in medieval times with fantasy characters, enemies and weapons with the end goal getting to the final four bosses. The main class that mostly every other class goes to is the Character Class. When the game first starts, we have it go to the Main Menu, and from there it connects to the character class. From there, when fighting a enemy, it tells the Character class on the stats of the enemy, as well as the type of enemy, with each one set with different values. The different rooms corrospond with the enemies for the rooms determine what kind and how mnay enemies of each. In the different rooms, there will be a shop room for the player to take a break and recover, displaying items for the player to purchase to help make their adventure easier.
- > Include a **class diagram(s)** for your project and a **description** of the diagram(s). Your class diagram(s) should include all the main classes you plan for the project. This should be in sufficient detail that another group could pick up the project this point and successfully complete it. Use proper UML notation (as discussed in the course slides).
  
  > ## Phase III
  > You will need to schedule a check-in for the second scrum meeting with a reader (using Calendly). Your entire team must be present. This meeting will occur on week 8 but NOT during lab time.
