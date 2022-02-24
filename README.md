@@ -1,6 +1,6 @@
- > As you complete each section you **must** remove the prompt text. Every *turnin* of this project includes points for formatting of this README so keep it clean and keep it up to date. 
- > Prompt text is any lines beginning with "\>"
- > Replace anything between \<...\> with your project specifics and remove angle brackets. For example, you need to name your project and replace the header right below this line with that title (no angle brackets). 
+~~As you complete each section you **must** remove the prompt text. Every *turnin* of this project includes points for formatting of this README so keep it clean and keep it up to date. 
+Prompt text is any lines beginning with "\>"
+Replace anything between \<...\> with your project specifics and remove angle brackets. For example, you need to name your project and replace the header right below this line with that title (no angle brackets).~~
 # Rogue Origins (A Text-Based RPG)
  
  > Authors: [Kenny Nguyen](https://github.com/knytnguyen), [Carine Tham](https://github.com/carinetham), [Ethan Hsu](https://github.com/ehsu092), [Alvin Vo](https://github.com/alvin-vo)
@@ -80,7 +80,6 @@ This is an interesting and important project for us because it gives us the oppo
  > You also need to set up an empty project board by choosing the  “Automated kanban with review” option on Github. You should also have a Backlog and In testing columns added.
 
 ## Class Diagram
- > ![Rogue Origins UML Class Diagram](https://cdn.discordapp.com/attachments/935084367720624168/941198198486216754/unknown.png)
  > **Class Diagram Description:**
  > The project's goal is to set a text-based RPG set in medieval times with fantasy characters, enemies and weapons with the end goal getting to the final four bosses. The main class that mostly every other class goes to is the Character Class. When the game first starts, we have it go to the Main Menu, and from there it connects to the character class. From there, when fighting a enemy, it tells the Character class on the stats of the enemy, as well as the type of enemy, with each one set with different values. The different rooms corrospond with the enemies for the rooms determine what kind and how mnay enemies of each. In the different rooms, there will be a shop room for the player to take a break and recover, displaying items for the player to purchase to help make their adventure easier.
  
