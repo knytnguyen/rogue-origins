@@ -2,9 +2,54 @@
  > Prompt text is any lines beginning with "\>"
  > Replace anything between \<...\> with your project specifics and remove angle brackets. For example, you need to name your project and replace the header right below this line with that title (no angle brackets). 
 # Rogue Origins (A Text-Based RPG)
- > Your author list below should include links to all members GitHub (remove existing author).
  
  > Authors: [Kenny Nguyen](https://github.com/knytnguyen), [Carine Tham](https://github.com/carinetham), [Ethan Hsu](https://github.com/ehsu092), [Alvin Vo](https://github.com/alvin-vo)
+ 
+ 
+## Project Description
+
+> Rogue Origins is a text-based role-playing game (RPG) where the player controls their virtual character through a virtual world. Set in a medieval time with fantasy characters, enemies, and weapons, the player progresses through the world of Rohendel with the end goal of defeating the four bosses that terrorize the continent. This is an interesting and important project for us because it gives us the opportunity to implement a program that gives the players opportunities to explore through a narrative while exploring and strengthening our fundamentals such as data structures, algorithms, and system design skills. Creating a text-based RPG in C++ allows us to not only formulate how to design and integrate many different moving pieces together, but it also allows us to create a narrative and express ourselves creatively for others to explore as well which is why this project is so interesting for us. 
+
+> For our game, we plan to use the following languages and tools that have been learned throughout this class.
+* C++ - Programming Language
+* Git – The version control software to accelerate collaboration and handle files
+* Github – Online Repository Storage and File Hosting Service
+* PuTTY – Client and Terminal
+* CMake – Software Compiler, Tester, and Builder
+* Vim – Text Editor for PuTTY
+* Valgrind – Memory Debugging and Leak Detection Tool
+* GoogleTest – Testing Framework
+
+> In Rogue Origins, to control your character and explore Rohendel, the player will be putting in user selections. The player can customize their character to best represent themselves and as they progress through the narrative, they’ll have to battle their way through a turn-based system against enemies. Stats like health, attack power, and their defense will have to be monitored as they fight their way to completion. In the end, the player will have to use all their accumulated knowledge and items to beat the last obstacle to victory. The Final Four.
+
+> When it comes to staying organized and implementing these features, we are using a composite design pattern. By using classes specific to each feature, we give each class specific elements and utilize the classes and the objects they make into other classes. In our turn-based combat, the enemy system class will go through which enemy to fight, as well as determining the attack power of those enemies. To spice up each playthrough and each dungeon, the rand() function is used to make each dungeon unique.  
+
+
+## Class Diagram
+
+ > ![Rogue Origins UML Class Diagram](https://cdn.discordapp.com/attachments/935084367720624168/941198198486216754/unknown.png)
+ > **Class Diagram Description:**
+ 
+ > Set in a text-based RPG in medieval times with fantasy characters and enemies, the user interacts with the Origin System by choosing character specific attacks, managing their health and resources to follow through a story. The player makes their choices as they take turns fighting the enemy until defeated. After each completed dungeon, the player can obtain the enemy’s loot as well as access a shop to stock back up on resources.
+
+ ## Screenshots
+ > Screenshots of the input/output after running your application
+ ## Installation/Usage
+ > Instructions on installing and running your application
+ ## Testing
+ > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
+ 
+
+
+# ~~Deletable Instructions Below~~
+
+
+
+
+
+ > As you complete each section you **must** remove the prompt text. Every *turnin* of this project includes points for formatting of this README so keep it clean and keep it up to date. 
+ > Prompt text is any lines beginning with "\>"
+ > Replace anything between \<...\> with your project specifics and remove angle brackets. For example, you need to name your project and replace the header right below this line with that title (no angle brackets). 
  
  > You will be forming a group of **FOUR** students and working on an interesting project. The project has 4 phases, each one with specific requirements. A list of proposed project ideas that have been successful in previous quarters is listed in the project specifications document on Canvas. You can select an idea from the list, start thinking about the features you will implement, what design patterns can help you implement them, and why. If you want to propose your own original idea, you will have to contact an instructor to discuss the project and obtain written permission before you submit your project proposal (Phase 1). Your project needs to implement at least one design pattern iteratively, which you will have to justify in later phases.The project work should be divided almost equally among team members. You can of course help each other, but it needs to be clear who will be responsible for which features. Additionally, you are expected to follow Scrum patterns, specifically the use of a Scrum (Project) board, Sprints, and Scrum meetings. While Daily Scrums are not required we highly encourage you to practice them.
 
