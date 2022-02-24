@@ -1,3 +1,6 @@
+#ifndef __SHOP_HPP__
+#define __SHOP_HPP__    
+
 #include <string>
 #include <iostream>
 #include <vector>
@@ -11,7 +14,7 @@ class Shop: public Item {
         ~Shop();
         void displayItems() const;
         
-        // put itemID to view and buy
+
         void viewPrice(int) const;
         void viewItemDetails(int) const;
         void buyItem(int);
@@ -31,19 +34,21 @@ class Item {
 
 };
 
-class Healing_Potion: public Item { // heal a flat amt of hp
-
-};
-
-class Strength_Potion: public Item { // multiply player dmg by 1.5 for entire round
-
-};
-
-
-class Sword_Upgrade: public Item { // permanently increase dmg by flat amt
-
-};
-
-class Shield_Upgrade: public Item { // permanently increase health by flat amt
-
-};
+// class Healing_Potion: public Item { // heal a flat amt of hp
+//
+// // };
+//
+// // class Strength_Potion: public Item { // multiply player dmg by 1.5 for entire round
+//
+// // };
+//
+//
+// // class Sword_Upgrade: public Item { // permanently increase dmg by flat amt
+//
+// // };
+//
+// // class Shield_Upgrade: public Item { // permanently increase health by flat amt
+//
+// // };
+//
+// #endif // __SHOP_HPP__
