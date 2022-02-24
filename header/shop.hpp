@@ -5,6 +5,18 @@
 #include <iostream>
 #include <vector>
 
+class Item {
+    private:
+        int price;
+        std::string itemDetails;
+    public:
+        Item(int p,std::string s): price(p), itemDetails(s) {}
+        ~Items();
+        std::string getItemDetails() const { return itemDetails; }
+        int getPrice() const { return price; }
+
+};
+
 class Shop: public Item {
     private:
         std::vector<Item*> items;
@@ -22,17 +34,7 @@ class Shop: public Item {
         void closeShop() const;
 };
 
-class Item {
-    private:
-        int price;
-        std::string itemDetails;
-    public:
-        Item(int p,std::string s): price(p), itemDetails(s) {}
-        ~Items();
-        std::string getItemDetails() const { return itemDetails; }
-        int getPrice() const { return price; }
 
-};
 
 // class Healing_Potion: public Item { // heal a flat amt of hp
 //
