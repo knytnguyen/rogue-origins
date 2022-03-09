@@ -9,7 +9,7 @@ void GameSystem::loadStories(){
 
 void GameSystem::runGame(){
     cout << endl;
-    cout << "You leave your village on a quest to rid the world of the evil sorcerer who has been terrorizing the lands\nand oppressing the people with his wicked magic for as long as you can remember. With your expert skills,\nyou are sure you can finally stop him. You set off on the road, walking to the sorcerer’s dark castle, until you\ncome across something." << endl << endl;
+    cout << "You leave your village on a quest to rid the world of the four evil mages who has been terrorizing the lands\nand oppressing the people with their wicked magic for as long as you can remember. With your expert skills,\nyou are sure you can finally stop him. You set off on the road, walking to the sorcerer’s dark castle, until you\ncome across something." << endl << endl;
 
     /* *** CAN BE CHANGED TO VARY LENGTH OF GAME. *** */
     int numOfStoriesToRun = listOfStories.size(); 
