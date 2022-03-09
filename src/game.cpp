@@ -5,7 +5,7 @@ using namespace std;
 Game::Game() {
     userMenuChoice = 'q';
     gameStatus = true;          // indicates whether the game is active or not
-    currentCharacter = 0;
+    currentPlayer = 0;
 }
 
 Game::~Game() {
@@ -80,9 +80,9 @@ void Game::continueGame() {
     cin.ignore();
     getline(cin, characterName);
 
-    playableCharacter.push_back(Character());
-    currentCharacter = playableCharacter.size() - 1;
-    playableCharacter[currentCharacter].createInitialCharacter(characterName);
+    playableCharacter.push_back(Player());
+    currentPlayer = playableCharacter.size() - 1;
+    playableCharacter[currentPlayer].createInitialPlayer(characterName);
 
     selectDifficulty();
 }
@@ -91,7 +91,7 @@ void Game::selectDifficulty() {
     char difficultySelection = '0';
 
     cout << endl;
-    cout << "Hello, " << this->playableCharacter[currentCharacter].getName() << "." << " Please select a difficulty:" << endl;
+    cout << "Hello, " << this->playableCharacter[currentPlayer].getName() << "." << " Please select a difficulty:" << endl;
     cout << "[1] - Easy" << endl;
     cout << "[2] - Medium" << endl;
     cout << "[3] - Hard" << endl;
@@ -105,23 +105,23 @@ void Game::selectDifficulty() {
     case '1':
         cout << endl;
         cout << "You have chosen the EASY difficulty." << endl;
-        cout << "Good luck and safe journeys, " << this->playableCharacter[currentCharacter].getName() << "." << endl;
+        cout << "Good luck and safe journeys, " << this->playableCharacter[currentPlayer].getName() << "." << endl;
         cout << endl;
-        this->playableCharacter[currentCharacter].initializeEasy(this->playableCharacter[currentCharacter].getName());
+        this->playableCharacter[currentPlayer].initializeEasy(this->playableCharacter[currentPlayer].getName());
         break;
     case '2':
         cout << endl;
         cout << "You have chosen the MEDIUM difficulty." << endl;
-        cout << "Good luck and safe journeys, " << this->playableCharacter[currentCharacter].getName() << "." << endl;
+        cout << "Good luck and safe journeys, " << this->playableCharacter[currentPlayer].getName() << "." << endl;
         cout << endl;
-        this->playableCharacter[currentCharacter].initializeEasy(this->playableCharacter[currentCharacter].getName());
+        this->playableCharacter[currentPlayer].initializeMedium(this->playableCharacter[currentPlayer].getName());
         break;
     case '3':
         cout << endl;
         cout << "You have chosen the HARD difficulty." << endl;
-        cout << "Good luck, " << this->playableCharacter[currentCharacter].getName() << ", you're gonna need it..." << endl;
+        cout << "Good luck, " << this->playableCharacter[currentPlayer].getName() << ", you're gonna need it..." << endl;
         cout << endl;
-        this->playableCharacter[currentCharacter].initializeEasy(this->playableCharacter[currentCharacter].getName());
+        this->playableCharacter[currentPlayer].initializeHard(this->playableCharacter[currentPlayer].getName());
         break;
     default:
         cout << endl;
