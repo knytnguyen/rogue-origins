@@ -1,12 +1,10 @@
 #include "../header/character.hpp"
 
 Character::Character() {
-    name = "NONE";
-    characterLevel = 1;
-    experiencePoints = 0;
-    experienceNext = 0;
-    healthPoints = 0;
-    attackPower = 0;
+    	name = "NONE";
+    	healthPoints = 0;
+    	attackPower = 0;
+	defense = 0;
 }
 
 Character::~Character() {

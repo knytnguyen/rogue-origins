@@ -7,26 +7,20 @@ using namespace std;
 
 class Character {
 	protected:
-    	/* data */
+    	// data for characters (Player and Enemy)
     		string name;
-    		int characterLevel;
-    		int experiencePoints;
-    		int experienceNext;
     		int healthPoints;
     		int attackPower;
-    		int coins;
-
+		int defense;
 	public:
-    	//constructors:
+    	// constructor:
     		Character();
     
-    	//destructors:
+    	// destructor:
     		~Character();
 
 	// character function 
 		virtual void attack() = 0;
-		inline const int& getHealthPoints() const { return this->healthPoints; }
-
 };
 
 #endif

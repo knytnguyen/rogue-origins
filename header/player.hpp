@@ -10,9 +10,7 @@ using namespace std;
 class Player : public Character {
 	private:
 		string name;
-    		int characterLevel;
-		int playerHP;
-		int playerAttackPower;
+    		int playerLevel;
     		int experiencePoints;
     		int experienceNext;
     		int coins;
@@ -38,9 +36,10 @@ class Player : public Character {
 
 	// getter functions:
 		inline const string& getName() const { return this->name; }
-   		inline const int& getLevel() const { return this->characterLevel; }
-		inline const int& getHP() const { return this->playerHP; }
-		inline const int& getAttackPower() const { return this->playerAttackPower; }
+   		inline const int& getLevel() const { return this->playerLevel; }
+		inline const int& getHealthPoints() const { return this->healthPoints; }
+		inline const int& getAttackPower() const { return this->attackPower; }
+		inline const int& getDefense() const { return this->defense; }
     		inline const int& getExperiencePoints() const { return this->experiencePoints; }
     		inline const int& getExperienceNext() const { return this->experienceNext; }
     		inline const int& getCoins() const { return this->coins; }
