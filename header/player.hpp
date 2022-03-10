@@ -33,6 +33,7 @@ class Player : public Character {
 		void useItem();
 		void openPlayerMenu();
 		void openShop();
+		void printPlayerStats();
 
 	// getter functions:
 		inline const string& getName() const { return this->name; }
@@ -43,7 +44,6 @@ class Player : public Character {
     		inline const int& getExperiencePoints() const { return this->experiencePoints; }
     		inline const int& getExperienceNext() const { return this->experienceNext; }
     		inline const int& getCoins() const { return this->coins; }
-
 };
 
 #endif
