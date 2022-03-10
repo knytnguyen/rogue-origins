@@ -1,4 +1,5 @@
 #include "gtest/gtest.h"
+#include "shop_test.hpp"
 
 #include "player_test.hpp"
 
