@@ -5,6 +5,8 @@
 #include <iostream>
 #include <vector>
 
+#include "../header/character.hpp"
+
 class Item {
     private:
         int price;
@@ -37,7 +39,43 @@ class Shop: public Item {
 
 
 // class Healing_Potion: public Item { // heal a flat amt of hp
-//
+class Healing_Potion : public Item
+{
+private:
+	string itemName = "Healing Potion"; //10 increase in health
+public:
+	~Healing_Potion() {
+		/* ... */
+	}
+
+  virtual string getItemName(){
+		return itemName;
+	}
+
+	int calculatingChangeInHealth(Character* UsingThisItem, Character* UsingThisItemOn)
+	{
+		if(UsingThisItem == UsingThisItemOn){
+            		int userHealth = UsingThisItem->getHealth();
+            		return ((int)((100 - userHealth)*.10));
+        	}else{
+            		cout << "Cannot use this item this." << endl;
+                return 0;
+        	}
+	}
+
+	void useThisItem(Character* UsingThisItem, Character* UsingThisItemOn)
+	{
+		if(UsingThisItem == UsingThisItemOn){
+            		int userHealth = UsingThisItem->getHealth();
+            		UsingThisItem->healthChange((int)((100 - userHealth)*.10));
+                cout << "You have gained: " << (int)((100 - userHealth)*.10) << " health from the " << itemName << "!" << endl;
+        	}else{
+            		cout << "Cannot use this item this." << endl;
+        	}
+	}
+};
+
+
 // // };
 //
 // // class Strength_Potion: public Item { // multiply player dmg by 1.5 for entire round

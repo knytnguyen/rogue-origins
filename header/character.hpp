@@ -37,6 +37,14 @@ public:
     inline const int& getHealthPoints() const { return this->healthPoints; }
     inline const int& getAttackPower() const { return this->attackPower; }
     inline const int& getCoins() const { return this->coins; }
+
+    int getHealth(){
+        return healthPoints;
+    }
+
+    void healthChange(int amountToChange){
+        healthPoints = healthPoints + amountToChange;
+    }
 };
 
 #endif
