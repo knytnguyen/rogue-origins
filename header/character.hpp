@@ -38,7 +38,7 @@ public:
     inline const int& getAttackPower() const { return this->attackPower; }
     inline const int& getCoins() const { return this->coins; }
 
-    //Health Pot add-ons
+    //Health Pot add-on variables
     int getHealth(){
         return healthPoints;
     }
@@ -46,6 +46,15 @@ public:
     void healthChange(int amountToChange){
         healthPoints = healthPoints + amountToChange;
     }
+
+    //Strength Pot add-on variables
+    int getAttack(){
+        return attackPower;
+    }
+    
+    void attackChange(int atkToChange){
+            attackPower = attackPower + atkToChange;
+        }
 };
 
 #endif
