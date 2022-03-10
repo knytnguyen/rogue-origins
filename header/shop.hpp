@@ -58,7 +58,7 @@ public:
             		int userHealth = UsingThisItem->getHealth();
             		return ((int)((100 - userHealth)*.10));
         	}else{
-            		cout << "Cannot use this item this." << endl;
+            		cout << "Cannot use this item like this." << endl;
                 return 0;
         	}
 	}
@@ -70,7 +70,7 @@ public:
             		UsingThisItem->healthChange((int)((100 - userHealth)*.10));
                 cout << "You have gained: " << (int)((100 - userHealth)*.10) << " health from the " << itemName << "!" << endl;
         	}else{
-            		cout << "Cannot use this item this." << endl;
+            		cout << "Cannot use this item like this." << endl;
         	}
 	}
 };

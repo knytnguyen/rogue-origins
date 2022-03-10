@@ -38,6 +38,7 @@ public:
     inline const int& getAttackPower() const { return this->attackPower; }
     inline const int& getCoins() const { return this->coins; }
 
+    //Health Pot add-ons
     int getHealth(){
         return healthPoints;
     }
