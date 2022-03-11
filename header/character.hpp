@@ -19,7 +19,7 @@ class Character {
     	// destructor:
     		~Character();
 
-	// character function 
+	// character function: 
 		virtual void attack() = 0;
 };
 

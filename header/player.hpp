@@ -11,8 +11,6 @@ class Player : public Character {
 	private:
 		string name;
     		int playerLevel;
-    		int experiencePoints;
-    		int experienceNext;
     		int coins;
 	public:
 	// constructor:
@@ -39,8 +37,6 @@ class Player : public Character {
 		inline const int& getHealthPoints() const { return this->healthPoints; }
 		inline const int& getAttackPower() const { return this->attackPower; }
 		inline const int& getDefense() const { return this->defense; }
-    		inline const int& getExperiencePoints() const { return this->experiencePoints; }
-    		inline const int& getExperienceNext() const { return this->experienceNext; }
     		inline const int& getCoins() const { return this->coins; }
 };
 

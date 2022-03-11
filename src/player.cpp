@@ -9,8 +9,6 @@ Player::Player() {
 	healthPoints = 0;
 	attackPower = 0;
 	defense = 0;
-    	experiencePoints = 0;
-    	experienceNext = 0;
 	coins = 0;
 }
 
@@ -23,8 +21,6 @@ void Player::createInitialPlayer(string name) {
 	this->healthPoints = 0;
 	this->attackPower = 0;
 	this->defense = 0;
-    	this->experiencePoints = 0;
-    	this->experienceNext = 0;       // need to come up with algorithm to calculate level up system
     	this->coins = 0;
 }
 
@@ -34,9 +30,7 @@ void Player::initializeEasy(string name) {
 	this->healthPoints = 100;
 	this->attackPower = 25;
 	this->defense = 10;
-    	this->experiencePoints = 0;
-    	this->experienceNext = 0;       // need to come up with algorithm to calculate level up system
-    	this->coins = 0;
+    	this->coins = 1000;
 }
 
 void Player::initializeMedium(string name) {
@@ -45,9 +39,7 @@ void Player::initializeMedium(string name) {
         this->healthPoints = 75;
         this->attackPower = 20;
 	this->defense = 7;
-        this->experiencePoints = 0;
-        this->experienceNext = 0;       // need to come up with algorithm to calculate level up system
-        this->coins = 0;
+        this->coins = 750;
 }
 
 void Player::initializeHard(string name) {
@@ -56,9 +48,7 @@ void Player::initializeHard(string name) {
         this->healthPoints = 50;
         this->attackPower = 15;
 	this->defense = 5;
-        this->experiencePoints = 0;
-        this->experienceNext = 0;       // need to come up with algorithm to calculate level up system
-        this->coins = 0;
+        this->coins = 500;
 }
 
 void Player::attack() {
