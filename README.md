@@ -36,21 +36,22 @@ This is an interesting and important project for us because it gives us the oppo
  ## Screenshots
  > ***Main Menu:*** 
  > 
- > ![Main Menu RO](https://user-images.githubusercontent.com/97259950/157841718-fa55ed75-0cab-4052-9354-6c242c9294ab.png)
+ > <img src="https://user-images.githubusercontent.com/97259950/157841718-fa55ed75-0cab-4052-9354-6c242c9294ab.png" width="10000" height="550">
 
  > ***Player Menu:***
- >
- >![Player Menu RO](https://cdn.discordapp.com/attachments/935084367720624168/951776092514025582/unknown.png)
+ > 
+ ><img src="https://cdn.discordapp.com/attachments/935084367720624168/951776092514025582/unknown.png" width="10000" height="550">
 
  > ***Gameplay:***
  > 
- >![Gameplay RO]()
+ >![Gameplay RO](https://cdn.discordapp.com/attachments/279448838245187584/951847761618280588/unknown.png)
 
 
  ## Installation/Usage
- > Rogue Origins will be ran through PuTTY through the terminal emulator serial console using CMake to compile, test, and run our game. After cloning the files into PuTTY, one needs to compile the program using CMake by typing these commands in order: (cmake3 .) (make) (./start). Doing so will bring you to the main menu where the player can now begin their journey into Rogue Origins.
+ > Rogue Origins will be ran through PuTTY through the terminal emulator serial console. To check for test cases, it will be using CMake to compile and test those specific values in the game. After cloning the files into PuTTY, one needs to compile the program using CMake by typing these commands in order: (cmake3 .) (make) (./test). Doing so will bring you to the test cases results that presents features within our system and if it is performing as expected. To begin the journey into Rogue Origins, one can simply run the a.exe (or a.out) and they will be summoned into the land of Rohendel.
  ## Testing
  > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
+ > 
  
 
 
