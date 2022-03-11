@@ -48,7 +48,13 @@ This is an interesting and important project for us because it gives us the oppo
 
 
  ## Installation/Usage
- > Rogue Origins will be ran through PuTTY through the terminal emulator serial console. To check for test cases, it will be using CMake to compile and test those specific values in the game. After cloning the files into PuTTY, one needs to compile the program using CMake by typing these commands in order: (cmake3 .) (make) (./test). Doing so will bring you to the test cases results that presents features within our system and if it is performing as expected. To begin the journey into Rogue Origins, one can simply run the a.exe (or a.out) and they will be summoned into the land of Rohendel.
+ > Rogue Origins will be ran through PuTTY through the terminal emulator serial console. To check for test cases, it will be using CMake to compile and test those specific values in the game. After cloning the files into PuTTY, one needs to compile the program using CMake by typing these commands in order: 
+ > ```
+ > cmake3 . 
+ > make 
+ > ./test
+ > ```
+ > Doing so will bring you to the test cases results that presents features within our system and if it is performing as expected. To begin the journey into Rogue Origins, one can simply run the a.exe (or a.out) and they will be summoned into the land of Rohendel.
  ## Testing ![Badge](https://img.shields.io/badge/build-passing-brightgreen)
  > This project was tested and validated through continuous intergration (CI). When working on the project, we set aside time in each of our schedules to work on the project together so that everything that is done on the project, everyone is there to see it. Combine that with constant pushes into the branches allowed us to be able to keep track of what's going on at basically all times. The project was tested through valgrind in PuTTy through a linux terminal, as well as through github workflow to make sure everyone had access for testing. 
  
