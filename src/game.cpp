@@ -54,12 +54,13 @@ void Game::printInstructions() {
 
     cout << endl;
     cout << "Welcome to the world of Rogue Origins, traveler." << endl;
-    cout << "Below you will find the rules that govern this game: " << endl;
-    cout << "1. Placeholder" << endl;
-    cout << "2. Placeholder" << endl;
-    cout << "3. Placeholder" << endl;
-    cout << "4. Placeholder" << endl;
-    cout << "5. Placeholder" << endl;
+    cout << "In this mysterious world, you are left to fend for yourself against the almighty Archmage, " << endl;
+    cout << "a powerful wizard with immense magic spells and power. Here are the rules of the game:" << endl << endl;
+    cout << "1. Selecting the Difficulty Level (1-3) will initialize your stats in respect to the difficulty you have chosen." << endl;
+    cout << "2. When spawned into the world, you are immediately greeted by the Archmage." << endl;
+    cout << "3. You have 2 options: Attack or access your Menu to fight." << endl;
+    cout << "4. Attacking the Archmage will prompt an immediate attack back, choose wisely." << endl;
+    cout << "5. By defeating the Archmage, you will fully complete the game. Otherwise, you must start all over." << endl;
     cout << endl;
 
     do {
