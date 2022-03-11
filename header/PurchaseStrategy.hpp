@@ -1,7 +1,7 @@
 #ifndef __PURCHASESTRATEGY_HPP__
 #define __PURCHASESTRATEGY_HPP__ 
 
-#include "../src/player.hpp"
+#include "../header/player.hpp"
 #include <string>
 #include <iostream>
 #include <vector>
