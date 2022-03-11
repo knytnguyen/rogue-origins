@@ -26,7 +26,7 @@ class Player : public Character {
     		void initializeHard(string name); // depending on the difficulty, we are going to initilize the character;	
 
 	// Player functions:
-		void attack();
+		void attack(Character*);
 		void fleeBattle();
 		void useItem();
 		void printPlayerStats();

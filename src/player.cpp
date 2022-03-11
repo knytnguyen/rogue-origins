@@ -51,7 +51,7 @@ void Player::initializeHard(string name) {
         this->coins = 500;
 }
 
-void Player::attack() {
+void Player::attack(Character*) {
 	cout << "Player attacks!" << endl;
 }
 

@@ -26,7 +26,7 @@ class Character {
     }
 
     // character function 
-    virtual void attack() = 0;
+    virtual void attack(Character*) = 0;
 
     void healthChange(int amountToChange){
         healthPoints = healthPoints + amountToChange;
