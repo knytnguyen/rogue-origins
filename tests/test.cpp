@@ -1,7 +1,7 @@
 #include "gtest/gtest.h"
 #include "shop_test.hpp"
 
-#include "player_test.hpp"
+//#include "player_test.hpp"
 
 int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);
