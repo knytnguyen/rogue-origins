@@ -11,8 +11,6 @@ class Player : public Character {
 private:
 	string name;
 	int playerLevel;
-	int experiencePoints;
-	int experienceNext;
 	int coins;
 public:
 	// constructor:
@@ -28,11 +26,12 @@ public:
 	void initializeHard(string name); // depending on the difficulty, we are going to initilize the character;	
 
 // Player functions:
-	void attack();
+	void attack(Character*);
 	void fleeBattle();
 	void useItem();
 	void openPlayerMenu();
 	void openShop();
+	void printPlayerStats();
 
 	// getter functions:
 	inline const string& getName() const { return this->name; }
@@ -40,8 +39,6 @@ public:
 	inline const int& getHealthPoints() const { return this->healthPoints; }
 	inline const int& getAttackPower() const { return this->attackPower; }
 	inline const int& getDefense() const { return this->defense; }
-	inline const int& getExperiencePoints() const { return this->experiencePoints; }
-	inline const int& getExperienceNext() const { return this->experienceNext; }
 	inline const int& getCoins() const { return this->coins; }
 
 	// setter functions:

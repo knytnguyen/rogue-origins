@@ -20,7 +20,19 @@ public:
     ~Character();
 
     // character function 
-    virtual void attack() = 0;
+    virtual void attack(Character*) = 0;
+    int getHealth(){
+        return healthPoints;
+    }
+    int getAttack(){
+        return attackPower;
+    }
+    void healthChange(int amountToChange){
+        healthPoints = healthPoints + amountToChange;
+    }
+    void attackChange(int atkToChange){
+            attackPower = attackPower + atkToChange;
+    }
 };
 
 #endif
