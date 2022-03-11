@@ -22,4 +22,13 @@ TEST(ArchmageTest, ArchmageAttack) {
     EXPECT_EQ(185, test2->getHealth());
 }
 
+TEST(ArchmageTest, ArchmageAttackTwice) {
+    Archmage* test1 = new Archmage();
+    Archmage* test2 = new Archmage();
+    test1->attack(test2);
+    test1->attack(test2);
+    EXPECT_EQ(170, test2->getHealth());
+}
+
+
 #endif
