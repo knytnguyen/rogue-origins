@@ -51,8 +51,9 @@ void Player::initializeHard(string name) {
         this->coins = 500;
 }
 
-void Player::attack(Character*) {
+void Player::attack(Character* enemy) {
 	cout << "Player attacks!" << endl;
+	enemy->healthChange(-this->getAttack());
 }
 
 void Player::printPlayerStats() {

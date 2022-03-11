@@ -3,6 +3,8 @@
 
 #include "../header/character.hpp"
 #include "../header/player.hpp"
+#include "../header/enemy.hpp"
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -14,6 +16,7 @@ class Game {
 		char quitGameChoice;
     		bool gameStatus;
 		bool playerMenuStatus;
+		bool finalBattleStatus;
     		vector<Player> playableCharacter;
     		int currentPlayer;
 
@@ -32,6 +35,8 @@ class Game {
 		void playerMenu();
 		// void printPlayerStats();
 		void quitGamePrompt();
+		void archmageBattle();
+		void playerBattleInterface();
     
     		// getter functions:
     		inline bool getGameStatus() const { return this->gameStatus; }
