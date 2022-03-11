@@ -208,23 +208,33 @@ void Game::archmageBattle() {
 
 void Game::playerBattleInterface() {
 	Archmage* finalBoss = new Archmage();
+	Player* ptrToPlayer = &playableCharacter[currentPlayer];
 	while (finalBattleStatus) {
 	char battleChoice;
         cout << endl;
         cout << "Battle Interface" << endl;
         cout << "[A] - Attack" << endl;
         cout << "[M] - Open Menu" << endl << endl;
-        cout << "What would you like to do?: ";
-        cout << endl;
-
+        // cout << "What would you like to do?: ";
+        // cout << endl;
+	
         if (finalBoss->getHealth() <= 0) {
                 cout << "You have defeated the Archmage!" << endl;
                 cout << "Congrats, you have beaten the game!" << endl;
                 finalBattleStatus = false;
                 gameStatus = false;
         }
+	else if (playableCharacter[currentPlayer].getHealth() <= 0) {
+		cout << "GAME OVER" << endl;
+		cout << playableCharacter[currentPlayer].getName() << " has been slain by the Archmage!" << endl;
+		finalBattleStatus = false;
+		gameStatus = false;
+	}
 
+	else {
+	cout << "What would you like to do?: ";
         cin >> battleChoice;
+	cout << endl;
 
         switch(battleChoice) {
         	case 'A':
@@ -233,6 +243,12 @@ void Game::playerBattleInterface() {
                 	cout << endl;
                 	cout << this->playableCharacter[currentPlayer].getName() << " deals a whopping " << this->playableCharacter[currentPlayer].getAttackPower() << " damage to the Archmage." << endl;
                 	cout << "The Archmage is left with: " << finalBoss->getHealth() << " HP." << endl;
+			cout << endl;
+			cout << endl;
+        		finalBoss->attack(ptrToPlayer);
+        		cout << "Oh no!" << endl;
+        		cout << "The Archmage attacks, dealing an immense " << finalBoss->getArchmageAttackPower() << " damage to " << ptrToPlayer->getName() << "!" << endl;
+        		cout << this->playableCharacter[currentPlayer].getName() << " has " << ptrToPlayer->getHealth() << " HP remaining." << endl;
                 	break;
         	case 'M':
         	case 'm':
@@ -244,5 +260,6 @@ void Game::playerBattleInterface() {
         	default:
                 	cout << "Please select a valid option. (A, M)" << endl;
         	}
+	}
 	}
 }

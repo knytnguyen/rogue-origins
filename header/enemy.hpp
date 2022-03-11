@@ -17,6 +17,7 @@ class Archmage: public Enemy {
         void attack(Character* p) {
             p->healthChange(-this->getAttack());
         }
+	inline const int& getArchmageAttackPower() const { return this->attackPower; }
 };
 
 #endif

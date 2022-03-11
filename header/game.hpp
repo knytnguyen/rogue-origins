@@ -33,11 +33,12 @@ class Game {
     		void selectDifficulty();
     		void printInstructions();
 		void playerMenu();
+
 		// void printPlayerStats();
 		void quitGamePrompt();
 		void archmageBattle();
 		void playerBattleInterface();
-    
+
     		// getter functions:
     		inline bool getGameStatus() const { return this->gameStatus; }
 };
