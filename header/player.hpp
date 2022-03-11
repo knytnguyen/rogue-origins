@@ -31,9 +31,6 @@ class Player : public Character {
 		void attack();
 		void fleeBattle();
 		void useItem();
-		void openPlayerMenu();
-		void openShop();
-		void printPlayerStats();
 
 	// getter functions:
 		inline const string& getName() const { return this->name; }

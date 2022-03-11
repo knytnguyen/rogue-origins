@@ -120,14 +120,20 @@ void Game::selectDifficulty() {
         cout << "Good luck and safe journeys, " << this->playableCharacter[currentPlayer].getName() << "." << endl;
         cout << endl;
         this->playableCharacter[currentPlayer].initializeMedium(this->playableCharacter[currentPlayer].getName());
-        break;
+        while(playerMenuStatus) {
+		playerMenu();
+	}
+	break;
     case '3':
         cout << endl;
         cout << "You have chosen the HARD difficulty." << endl;
         cout << "Good luck, " << this->playableCharacter[currentPlayer].getName() << ", you're gonna need it..." << endl;
         cout << endl;
         this->playableCharacter[currentPlayer].initializeHard(this->playableCharacter[currentPlayer].getName());
-        break;
+        while(playerMenuStatus) {
+		playerMenu();
+	}
+	break;
     default:
         cout << endl;
         cout << "Please enter a valid difficulty (1-3)." << endl;
@@ -168,19 +174,28 @@ void Game::playerMenu() {
 		quitGamePrompt();
 		break;
 	default:
-		cout << "Please input a valid choice (p, s, e, q)" << endl;
+	cout << "Please select a valid choice (P, S, E, Q)" << endl;
 		playerMenu();
 	}
 }
 
 void Game::printPlayerStats() {
+	string userInput = "";
 	cout << endl;
 	cout << "╔============================== " << 	this->playableCharacter[currentPlayer].getName() << "'s Stats ==============================╗ " << endl << endl;
-	cout << "				Health: " <<  playableCharacter[currentPlayer].getHealthPoints() << endl;
-						// add other player stats here
+	cout << "				 Level:   " << playableCharacter[currentPlayer].getLevel() << endl;
+	cout << "				 Health:  " << playableCharacter[currentPlayer].getHealthPoints() << endl;
+	cout << "				 Attack:  " << playableCharacter[currentPlayer].getAttackPower() << endl;
+	cout << "				 Defense: " << playableCharacter[currentPlayer].getDefense() << endl;
+	cout << "				 Coins:   " << playableCharacter[currentPlayer].getCoins() << endl;
 	cout << endl;
-	cout << "		   Press ENTER to return back to Player Menu" << endl << endl; // add implmentation here
-	cout << "╚=============================================================================╝" << endl << endl;
+	cout << "╚============================================================================╝" << endl << endl;
+	do {
+        cout << "            Press the ENTER key to return back to the Player Menu: ";
+                cin.ignore();
+                getline(cin, userInput);
+                userInput = "";
+        } while (userInput.length() != 0);
 }
 
 void Game::quitGamePrompt() {
