@@ -1,66 +1,84 @@
+#include "../header/shop.hpp"
+#include "../header/character.hpp"
 #include "../header/player.hpp"
+#include "../header/shopItem.hpp"
+#include "../header/PurchaseStrategy.hpp"
+#include "../header/game.hpp"
 
-#include <iostream>
 using namespace std;
 
-Player::Player() {
-    name = "NONE";
-    playerLevel = 1;
-    healthPoints = 0;
-    attackPower = 0;
-    defense = 0;
-    experiencePoints = 0;
-    experienceNext = 0;
-    coins = 0;
+void Shop::displayItems(Player* player) {
+    int shopChoice, buyChoice;
+    Healing_Potion hp;
+    Strength_Potion sp;
+    Sword_Upgrade su;
+    Shield_Upgrade shu;
+
+    cout << "|=============================== Shop ====================================================================================================================|" << endl;
+    cout << endl;
+    cout << "                      1 - Healing Potion: " << hp.getPrice() << " coins               Heals " << hp.getHealth() << " hp" << endl;
+    cout << "                      2 - Strength Potion: " << sp.getPrice() << " coins              Multiplies the character's damage by " << sp.getAttackPower() << endl;
+    cout << "                      3 - Sword Upgrade: " << su.getPrice() << " coins                Permanently increases sword damage by " << su.getSword() << endl;
+    cout << "                      4 - Shield Upgrade: " << shu.getPrice() << " coins               Permanently increases defense by " << shu.getDef() << endl;
+    cout << "                      5 - Buy Item" << endl;
+    cout << "                      6 - Exit Shop" << endl;
+    cout << endl;
+    cout << "|=========================================================================================================================================================|" << endl;
+
+    cout << "Shop choice: ";
+    cin >> shopChoice;
+
+    switch (shopChoice) {
+    case 5:
+        cout << "What item do you want to purchase? ";
+        cin >> buyChoice;
+        if (buyChoice == 1 || buyChoice == 2 || buyChoice == 3 || buyChoice == 4) {
+            buyItem(buyChoice, player);
+        }
+        else {
+            cout << "Invalid item" << endl;
+            cout << "Going back to shop menu..." << endl;
+        }
+        displayItems(player);
+        break;
+    case 6:
+        playerMenu();
+        break;
+    default:
+        cout << endl;
+        cout << "Please enter a valid input" << endl;
+        cout << endl;
+        displayItems(player);
+    }
 }
 
-Player::~Player() {
-}
 
-void Player::createInitialPlayer(string name) {
-    this->name = name;
-    this->playerLevel = 1;
-    this->healthPoints = 0;
-    this->attackPower = 0;
-    this->defense = 0;
-    this->experiencePoints = 0;
-    this->experienceNext = 0;       // need to come up with algorithm to calculate level up system
-    this->coins = 0;
-}
-
-void Player::initializeEasy(string name) {
-    this->name = name;
-    this->playerLevel = 1;
-    this->healthPoints = 100;
-    this->attackPower = 25;
-    this->defense = 10;
-    this->experiencePoints = 0;
-    this->experienceNext = 0;       // need to come up with algorithm to calculate level up system
-    this->coins = 0;
-}
-
-void Player::initializeMedium(string name) {
-    this->name = name;
-    this->playerLevel = 1;
-    this->healthPoints = 75;
-    this->attackPower = 20;
-    this->defense = 7;
-    this->experiencePoints = 0;
-    this->experienceNext = 0;       // need to come up with algorithm to calculate level up system
-    this->coins = 0;
-}
-
-void Player::initializeHard(string name) {
-    this->name = name;
-    this->playerLevel = 1;
-    this->healthPoints = 50;
-    this->attackPower = 15;
-    this->defense = 5;
-    this->experiencePoints = 0;
-    this->experienceNext = 0;       // need to come up with algorithm to calculate level up system
-    this->coins = 0;
-}
-
-void Player::attack() {
-    cout << "Player attacks!" << endl;
+void Shop::buyItem(int buyChoice, Player* player) {
+    PurchaseStrategy ps;
+    switch (buyChoice) {
+    case 1: {
+        Shop* potion = new Healing_Potion();
+        if (ps.increaseStat(player, potion) == true)
+            cout << "Bought Healing Potion!" << endl; 
+        break;
+    }
+    case 2: {
+        Shop* strength = new Strength_Potion();
+        if (ps.increaseStat(player, strength) == true)
+            cout << "Bought Strength Potion!" << endl; 
+        break;
+    }
+    case 3: {
+        Shop* swordUp = new Sword_Upgrade();
+        if (ps.increaseStat(player, swordUp) == true)
+            cout << "Bought Sword Upgrade!" << endl; 
+        break;
+    }
+    case 4: {
+        Shop* shieldUp = new Shield_Upgrade();
+        if (ps.increaseStat(player, shieldUp) == true)
+            cout << "Bought Shield Upgrade!" << endl; 
+        break;
+        }
+    }
 }

@@ -4,8 +4,14 @@ SET(CMAKE_CXX_STANDARD 11)
 
 ADD_SUBDIRECTORY(googletest)
 
+project(RogueOrigins)
+
 ADD_EXECUTABLE(test
-    test.cpp
+  tests/test.cpp
+	src/game.cpp
+	src/character.cpp
+	src/player.cpp
+
 )
 
 TARGET_LINK_LIBRARIES(test gtest)
