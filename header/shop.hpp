@@ -29,7 +29,4 @@ public:
     virtual int getSword() = 0;
 };
 
-
-
-
 #endif
