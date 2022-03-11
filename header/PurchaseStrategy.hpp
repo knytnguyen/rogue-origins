@@ -2,6 +2,7 @@
 #define __PURCHASESTRATEGY_HPP__ 
 
 #include "../header/player.hpp"
+#include "../header/shopitem.hpp"
 #include <string>
 #include <iostream>
 #include <vector>
