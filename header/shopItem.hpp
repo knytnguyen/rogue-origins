@@ -2,7 +2,6 @@
 #define __SHOPITEM_HPP__  
 
 #include "../header/player.hpp"
-#include "../header/shop.hpp"
 #include <string>
 #include <iostream>
 #include <vector>
