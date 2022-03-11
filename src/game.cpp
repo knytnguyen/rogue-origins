@@ -1,4 +1,6 @@
 #include "../header/game.hpp"
+#include "../header/shopItem.hpp"
+#include "../header/PurchaseStrategy.hpp"
 
 using namespace std;
 
@@ -156,7 +158,8 @@ void Game::playerMenu() {
 		break;
 	case 'S':
 	case 's':
-		// printShop(); to display shop function
+		Shop* potion = new Healing_Potion();
+        potion->displayItems(player);
 		playerMenuStatus = false;
 		break;
 	case 'E':
