@@ -18,14 +18,7 @@ class Character {
     
     	// destructor:
     		~Character();
-  
-    // accessors:
-    inline const string& getName() const { return this->name; }
-    inline const int& getLevel() const { return this->characterLevel; }
-    inline const int& getHealthPoints() const { return this->healthPoints; }
-    inline const int& getAttackPower() const { return this->attackPower; }
-    inline const int& getCoins() const { return this->coins; }
-    
+   
     // character functions: 
     //Health Pot add-on variables
     int getHealth(){
@@ -43,7 +36,7 @@ class Character {
     
     void attackChange(int atkToChange){
             attackPower = attackPower + atkToChange;
-        }
+    }
 		virtual void attack() = 0;
 };
 
