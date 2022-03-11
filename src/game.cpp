@@ -259,8 +259,6 @@ void Game::runGame(){
     archmageBattle();
 }
 
-
-
 void Game::archmageBattle() {
 	finalBattleStatus = true;
 	cout << endl;
