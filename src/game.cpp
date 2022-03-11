@@ -111,7 +111,7 @@ void Game::selectDifficulty() {
         cout << endl;
         this->playableCharacter[currentPlayer].initializeEasy(this->playableCharacter[currentPlayer].getName());
 	while(playerMenuStatus) {
-		playerMenu();
+		runGame();
 	}
         break;
     case '2':
@@ -121,7 +121,7 @@ void Game::selectDifficulty() {
         cout << endl;
         this->playableCharacter[currentPlayer].initializeMedium(this->playableCharacter[currentPlayer].getName());
         while(playerMenuStatus) {
-		playerMenu();
+		runGame();
 	}
 	break;
     case '3':
@@ -131,7 +131,7 @@ void Game::selectDifficulty() {
         cout << endl;
         this->playableCharacter[currentPlayer].initializeHard(this->playableCharacter[currentPlayer].getName());
         while(playerMenuStatus) {
-		playerMenu();
+		runGame();
 	}
 	break;
     default:
