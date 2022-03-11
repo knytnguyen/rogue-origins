@@ -1,7 +1,7 @@
 #ifndef __SHOPITEM_HPP__
 #define __SHOPITEM_HPP__  
 
-#include "../src/player.hpp"
+#include "../header/player.hpp"
 #include <string>
 #include <iostream>
 #include <vector>
