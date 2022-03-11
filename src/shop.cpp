@@ -3,6 +3,7 @@
 #include "../header/player.hpp"
 #include "../header/shopItem.hpp"
 #include "../header/PurchaseStrategy.hpp"
+#include "../header/game.hpp"
 
 using namespace std;
 
@@ -33,15 +34,7 @@ void Shop::displayItems(Player* player) {
         cout << "What item do you want to purchase? ";
         cin >> buyChoice;
         if (buyChoice == 1 || buyChoice == 2 || buyChoice == 3 || buyChoice == 4) {
-            cout << "Before coin: " << player->getCoins() << endl;
-            cout << "Before health: " << player->getHealthPoints() << endl;;
-            cout << "Before strength potion: " << player->getAttackPower() << endl;;
-            cout << "Before shield potion: " << player->getDefense() << endl;;
             buyItem(buyChoice, player);
-            cout << "After coin: " << player->getCoins() << endl;;
-            cout << "After health: " << player->getHealthPoints() << endl;;
-            cout << "After strength potion: " << player->getAttackPower() << endl;;
-            cout << "After shield potion: " << player->getDefense() << endl;;
         }
         else {
             cout << "Invalid item" << endl;
@@ -50,7 +43,7 @@ void Shop::displayItems(Player* player) {
         displayItems(player);
         break;
     case 6:
-        
+        playerMenu();
         break;
     default:
         cout << endl;
@@ -90,20 +83,4 @@ void Shop::buyItem(int buyChoice, Player* player) {
         }
     }
     
-}
-
-
-int main() {
-    Player* ch = new Player();
-    ch->createInitialPlayer("John");
-    ch->setCoins(5000);
-    ch->setAttackPower(10);
-    
-    cout << ch->getName() << endl;
-    Healing_Potion shop;
-    shop.displayItems(ch);
-
-
-
-    return 0;
 }
