@@ -29,7 +29,7 @@ void Player::initializeEasy(string name) {
     this->name = name;
     this->playerLevel = 1;
 	this->healthPoints = 100;
-	this->attackPower = 25;
+	this->attackPower = 35;
 	this->defense = 10;
     this->coins = 1000;
 }
