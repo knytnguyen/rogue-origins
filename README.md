@@ -29,12 +29,24 @@ This is an interesting and important project for us because it gives us the oppo
 ## Class Diagram
 
  > ![Rogue Origins UML Class Diagram](https://cdn.discordapp.com/attachments/935084367720624168/941198198486216754/unknown.png)
- > **Class Diagram Description:**
  
+ > **Class Diagram Description:** 
  > Set in a text-based RPG in medieval times with fantasy characters and enemies, the user interacts with the Origin System by choosing character specific attacks, managing their health and resources to follow through a story. The player makes their choices as they take turns fighting the enemy until defeated. After each completed dungeon, the player can obtain the enemy’s loot as well as access a shop to stock back up on resources.
 
  ## Screenshots
- > Screenshots of the input/output after running your application
+ > ***Main Menu:*** 
+ > 
+ > ![Main Menu RO](https://user-images.githubusercontent.com/97259950/157841718-fa55ed75-0cab-4052-9354-6c242c9294ab.png)
+
+ > ***Player Menu:***
+ >
+ >![Player Menu RO](https://cdn.discordapp.com/attachments/935084367720624168/951776092514025582/unknown.png)
+
+ > ***Gameplay:***
+ > 
+ >![Gameplay RO]()
+
+
  ## Installation/Usage
  > Rogue Origins will be ran through PuTTY through the terminal emulator serial console using CMake to compile, test, and run our game. After cloning the files into PuTTY, one needs to compile the program using CMake by typing these commands in order: (cmake3 .) (make) (./start). Doing so will bring you to the main menu where the player can now begin their journey into Rogue Origins.
  ## Testing

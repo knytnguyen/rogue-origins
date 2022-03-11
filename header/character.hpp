@@ -6,37 +6,30 @@
 using namespace std;
 
 class Character {
-	protected:
-    	// data for characters (Player and Enemy)
-    		string name;
-    		int healthPoints;
-    		int attackPower;
-		int defense;
-	public:
-    	// constructor:
-    		Character();
-    
-    	// destructor:
-    		~Character();
-   
-    // character functions: 
-    //Health Pot add-on variables
-    int getHealth(){
-        return healthPoints;
-    }
+protected:
+    // data for characters (Player and Enemy)
+    string name;
+    int healthPoints;
+    int attackPower;
+    int defense;
+public:
+    // constructor:
+    Character();
+
+    // destructor:
+    ~Character();
 
     // character function 
     virtual void attack(Character*) = 0;
-
-    void healthChange(int amountToChange){
-        healthPoints = healthPoints + amountToChange;
+    int getHealth(){
+        return healthPoints;
     }
-
-    //Strength Pot add-on variables
     int getAttack(){
         return attackPower;
     }
-    
+    void healthChange(int amountToChange){
+        healthPoints = healthPoints + amountToChange;
+    }
     void attackChange(int atkToChange){
             attackPower = attackPower + atkToChange;
     }
