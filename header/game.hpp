@@ -30,7 +30,7 @@ class Game {
     		void selectDifficulty();
     		void printInstructions();
 		void playerMenu();
-		void printPlayerStats();
+		// void printPlayerStats();
 		void quitGamePrompt();
     
     		// getter functions:

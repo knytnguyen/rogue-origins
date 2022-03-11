@@ -158,7 +158,7 @@ void Game::playerMenu() {
 	switch(playerMenuChoice) {
 	case 'P':
 	case 'p':
-		printPlayerStats();
+		playableCharacter[currentPlayer].printPlayerStats();
 		break;
 	case 'S':
 	case 's':
@@ -177,25 +177,6 @@ void Game::playerMenu() {
 	cout << "Please select a valid choice (P, S, E, Q)" << endl;
 		playerMenu();
 	}
-}
-
-void Game::printPlayerStats() {
-	string userInput = "";
-	cout << endl;
-	cout << "╔============================== " << 	this->playableCharacter[currentPlayer].getName() << "'s Stats ==============================╗ " << endl << endl;
-	cout << "				 Level:   " << playableCharacter[currentPlayer].getLevel() << endl;
-	cout << "				 Health:  " << playableCharacter[currentPlayer].getHealthPoints() << endl;
-	cout << "				 Attack:  " << playableCharacter[currentPlayer].getAttackPower() << endl;
-	cout << "				 Defense: " << playableCharacter[currentPlayer].getDefense() << endl;
-	cout << "				 Coins:   " << playableCharacter[currentPlayer].getCoins() << endl;
-	cout << endl;
-	cout << "╚============================================================================╝" << endl << endl;
-	do {
-        cout << "            Press the ENTER key to return back to the Player Menu: ";
-                cin.ignore();
-                getline(cin, userInput);
-                userInput = "";
-        } while (userInput.length() != 0);
 }
 
 void Game::quitGamePrompt() {

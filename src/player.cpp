@@ -64,3 +64,22 @@ void Player::initializeHard(string name) {
 void Player::attack() {
 	cout << "Player attacks!" << endl;
 }
+
+void Player::printPlayerStats() {
+	string userInput = "";
+	cout << endl;
+	cout << "╔============================== " << this->name << "'s Stats ==============================╗ " << endl << endl;
+	cout << "				 Level:   " << this->playerLevel << endl;
+	cout << "				 Health:  " << this->healthPoints << endl;
+	cout << "				 Attack:  " << this->attackPower  << endl;
+	cout << "				 Defense: " << this->defense  << endl;
+	cout << "				 Coins:   " << this->coins  << endl;
+	cout << endl;
+	cout << "╚============================================================================╝" << endl << endl;
+	do {
+        cout << "            Press the ENTER key to return back to the Player Menu: ";
+                cin.ignore();
+                getline(cin, userInput);
+                userInput = "";
+        } while (userInput.length() != 0);
+}
