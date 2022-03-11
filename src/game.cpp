@@ -200,46 +200,49 @@ void Game::archmageBattle() {
 	finalBattleStatus = true;
 	cout << endl;
 	cout << "The Archmage has appeared! Get ready for the battle!" << endl;
-	while (finalBattleStatus) {
-		playerBattleInterface();				
-	} 
+	// while (finalBattleStatus) {
+	//	playerBattleInterface();				
+	// }
+	playerBattleInterface(); 
 }
 
 void Game::playerBattleInterface() {
 	Archmage* finalBoss = new Archmage();
+	while (finalBattleStatus) {
 	char battleChoice;
-	cout << endl;
-	cout << "Battle Interface" << endl;
-	cout << "[A] - Attack" << endl;
-	cout << "[M] - Open Menu" << endl << endl;
-	cout << "What would you like to do?: ";
-	cout << endl;
+        cout << endl;
+        cout << "Battle Interface" << endl;
+        cout << "[A] - Attack" << endl;
+        cout << "[M] - Open Menu" << endl << endl;
+        cout << "What would you like to do?: ";
+        cout << endl;
 
-	if (finalBoss->getHealth() <= 0) {
-		cout << "You have defeated the Archmage!" << endl;
-		cout << "Congrats!" << endl;
-		finalBattleStatus = false;
-		gameStatus = false;		
-	}
+        if (finalBoss->getHealth() <= 0) {
+                cout << "You have defeated the Archmage!" << endl;
+                cout << "Congrats, you have beaten the game!" << endl;
+                finalBattleStatus = false;
+                gameStatus = false;
+        }
 
-	cin >> battleChoice;
+        cin >> battleChoice;
 
-	switch(battleChoice) {
-	case 'A':
-	case 'a':
-		playableCharacter[currentPlayer].attack(finalBoss);
-		cout << endl;
-		cout << this->playableCharacter[currentPlayer].getName() << " deals a whopping " << this->playableCharacter[currentPlayer].getAttackPower() << " damage to the Archmage." << endl;
-		cout << "The Archmage is left with: " << finalBoss->getHealth() << " HP." << endl;
-		break;
-	case 'M':
-	case 'm':
-		playerMenuStatus = true;
-		while(playerMenuStatus) {
-                	playerMenu();
+        switch(battleChoice) {
+        	case 'A':
+        	case 'a':
+                	playableCharacter[currentPlayer].attack(finalBoss);
+                	cout << endl;
+                	cout << this->playableCharacter[currentPlayer].getName() << " deals a whopping " << this->playableCharacter[currentPlayer].getAttackPower() << " damage to the Archmage." << endl;
+                	cout << "The Archmage is left with: " << finalBoss->getHealth() << " HP." << endl;
+                	break;
+        	case 'M':
+        	case 'm':
+                	playerMenuStatus = true;
+                	while(playerMenuStatus) {
+                        	playerMenu();
+                	}
+                	break;
+        	default:
+                	cout << "Please select a valid option. (A, M)" << endl;
         	}
-		break;
-	default:
-		cout << "Please select a valid option. (A, M)" << endl;			
 	}
 }
