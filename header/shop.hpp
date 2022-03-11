@@ -64,7 +64,7 @@ public:
 	void useThisItem(Character* UsingThisItem, Character* UsingThisItemOn)
 	{
 		if(UsingThisItem == UsingThisItemOn){
-            		int healthPoints = UsingThisItem->getHealthPoints();
+            		int healthPoints = UsingThisItem->getHealth();
             		UsingThisItem->healthChange((int)((100 - healthPoints)*.10));
                 cout << "You have gained: " << (int)((100 - healthPoints)*.10) << " health from the " << itemName << "!" << endl;
         	}else{
