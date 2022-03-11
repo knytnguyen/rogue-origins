@@ -36,7 +36,7 @@ This is an interesting and important project for us because it gives us the oppo
  ## Screenshots
  > Screenshots of the input/output after running your application
  ## Installation/Usage
- > Instructions on installing and running your application
+ > Rogue Origins will be ran through PuTTY through the terminal emulator serial console using CMake to compile, test, and run our game. After cloning the files into PuTTY, one needs to compile the program using CMake by typing these commands in order: (cmake3 .) (make) (./start). Doing so will bring you to the main menu where the player can now begin their journey into Rogue Origins.
  ## Testing
  > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
  

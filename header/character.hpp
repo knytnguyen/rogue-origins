@@ -6,28 +6,18 @@
 using namespace std;
 
 class Character {
-private:
-    /* data */
-    string name;
-    int characterLevel;
-    int experiencePoints;
-    int experienceNext;
-    int healthPoints;
-    int attackPower;
-    int coins;
-
-public:
-    //constructors:
-    Character();
+	protected:
+    	// data for characters (Player and Enemy)
+    		string name;
+    		int healthPoints;
+    		int attackPower;
+		int defense;
+	public:
+    	// constructor:
+    		Character();
     
-    //destructors:
-    ~Character();
-
-    //functions:
-    void createInitialCharacter(string name);
-    void initializeEasy(string name); // depending on the difficulty, we are going to initilize the character;
-    void initializeMedium(string name); // depending on the difficulty, we are going to initilize the character;
-    void initializeHard(string name); // depending on the difficulty, we are going to initilize the character;
+    	// destructor:
+    		~Character();
 
     //accessors:
     inline const string& getName() const { return this->name; }
@@ -55,6 +45,9 @@ public:
     void attackChange(int atkToChange){
             attackPower = attackPower + atkToChange;
         }
+
+	// character function 
+		virtual void attack() = 0;
 };
 
 #endif

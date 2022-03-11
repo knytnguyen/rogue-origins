@@ -13,7 +13,7 @@ class Item {
         std::string itemDetails;
     public:
         Item(int p,std::string s): price(p), itemDetails(s) {}
-        ~Items();
+        ~Item();
         std::string getItemDetails() const { return itemDetails; }
         int getPrice() const { return price; }
 
@@ -118,4 +118,4 @@ public:
 //
 // // };
 //
-// #endif // __SHOP_HPP__
+#endif // __SHOP_HPP__
