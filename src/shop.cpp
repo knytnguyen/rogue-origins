@@ -47,7 +47,7 @@ void Shop::displayItems(Player* player) {
             cout << "Invalid item" << endl;
             cout << "Going back to shop menu..." << endl;
         }
-        displayItems(player);
+        displayItems(player); 
         break;
     case 6:
         
