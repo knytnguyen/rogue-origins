@@ -199,3 +199,43 @@ void Game::quitGamePrompt() {
 		quitGamePrompt();
 	}
 }
+
+void Game::storyPrompt() {
+	cout << "Welcome to the world of Rogue Origins traveler. In this world you are left alone to fend off \n the vast amounts of enemies that await you."
+	cout << "What better way to begin than to send you right off into the a fight." << endl;
+	do {
+        cout << "Press the ENTER key to continue";
+        cin.ignore();
+        getline(cin, userInput);
+        userInput = "";
+    	} while (userInput.length() != 0);	
+	enemyBattle();	
+}
+
+void Game::firstEnemyBattle() {
+	cout << "Oh look! A goblin has appreared!" << endl;
+	cout << "Below you will see a prompt of all your available choices" << endl;
+	cout << "Choose wisely and farewell, traveler." << endl;
+	playerBattleInterface();
+}
+
+void Game::playerBattleInterface() {
+	char playerBattleChoice;
+	cout << endl;
+	cout << "[A] - ATTACK" << endl;
+	cout << "[M] - PLAYER MENU" << endl;
+	cout << "[F] - FLEE" << endl;
+	cin >> playerBattleChoice;
+	switch(playerBattleChoice) {
+	case 'A':
+	case 'a':
+		playableCharacter[currentPlayer].attack();		
+	case 'M':
+	case 'm':
+		while (playerMenuStatus) {
+			playerMenu
+		}
+	}
+
+	switch(playerBattleChoice)
+}

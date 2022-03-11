@@ -37,7 +37,8 @@ class Character {
     void attackChange(int atkToChange){
             attackPower = attackPower + atkToChange;
     }
-		virtual void attack() = 0;
+    virtual void attack() = 0;
+    virtual void takeDamage(int) = 0;
 };
 
 #endif
