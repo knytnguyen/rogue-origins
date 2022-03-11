@@ -18,9 +18,28 @@ class Character {
     
     	// destructor:
     		~Character();
+   
+    // character functions: 
+    //Health Pot add-on variables
+    int getHealth(){
+        return healthPoints;
+    }
 
-	// character function 
-		virtual void attack(Character*) = 0;
+    // character function 
+    virtual void attack(Character*) = 0;
+
+    void healthChange(int amountToChange){
+        healthPoints = healthPoints + amountToChange;
+    }
+
+    //Strength Pot add-on variables
+    int getAttack(){
+        return attackPower;
+    }
+    
+    void attackChange(int atkToChange){
+            attackPower = attackPower + atkToChange;
+    }
 };
 
 #endif

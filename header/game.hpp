@@ -9,8 +9,11 @@
 
 class Game {
 	private:
-    		char userMenuChoice;
+    		char mainMenuChoice;
+		char playerMenuChoice;
+		char quitGameChoice;
     		bool gameStatus;
+		bool playerMenuStatus;
     		vector<Player> playableCharacter;
     		int currentPlayer;
 
@@ -26,6 +29,9 @@ class Game {
     		void continueGame();
     		void selectDifficulty();
     		void printInstructions();
+		void playerMenu();
+		// void printPlayerStats();
+		void quitGamePrompt();
     
     		// getter functions:
     		inline bool getGameStatus() const { return this->gameStatus; }
