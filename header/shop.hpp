@@ -5,6 +5,8 @@
 #include <iostream>
 #include <vector>
 
+#include "../header/character.hpp"
+
 class Item {
     private:
         int price;
@@ -34,17 +36,80 @@ class Shop: public Item {
         void closeShop() const;
 };
 
-
-
 // class Healing_Potion: public Item { // heal a flat amt of hp
-//
-// // };
-//
+class Healing_Potion : public Item
+{
+private:
+	string itemName = "Healing Potion"; //10 increase in health
+public:
+	~Healing_Potion() {
+		/* ... */
+	}
+
+  virtual string getItemName(){
+		return itemName;
+	}
+
+	int calculatingChangeInHealth(Character* UsingThisItem, Character* UsingThisItemOn)
+	{
+		if(UsingThisItem == UsingThisItemOn){
+            		int healthPoints = UsingThisItem->getHealth();
+            		return ((int)((100 - healthPoints)*.10));
+        	}else{
+            		cout << "Cannot use this item like this." << endl;
+                return 0;
+        	}
+	}
+
+	void useThisItem(Character* UsingThisItem, Character* UsingThisItemOn)
+	{
+		if(UsingThisItem == UsingThisItemOn){
+            		int healthPoints = UsingThisItem->getHealthPoints();
+            		UsingThisItem->healthChange((int)((100 - healthPoints)*.10));
+                cout << "You have gained: " << (int)((100 - healthPoints)*.10) << " health from the " << itemName << "!" << endl;
+        	}else{
+            		cout << "Cannot use this item like this." << endl;
+        	}
+	}
+};
+
 // // class Strength_Potion: public Item { // multiply player dmg by 1.5 for entire round
-//
-// // };
-//
-//
+class Strength_Potion : public Item
+{
+private:
+	string itemName = "Strength Potion"; //multiply player dmg by 1.5 for entire round
+public:
+	~Strength_Potion() {
+		/* ... */
+	}
+
+  virtual string getItemName(){
+		return itemName;
+	}
+
+	int calculatingChangeInAttack(Character* UsingThisItem, Character* UsingThisItemOn)
+	{
+		if(UsingThisItem == UsingThisItemOn){
+            		int attackPower = UsingThisItem->getAttack();
+            		return ((int)((100 - attackPower)*1.5));
+        	}else{
+            		cout << "Cannot use this item like this." << endl;
+                return 0;
+        	}
+	}
+
+	void useThisItem(Character* UsingThisItem, Character* UsingThisItemOn)
+	{
+		if(UsingThisItem == UsingThisItemOn){
+            		int attackPower = UsingThisItem->getAttack();
+            		UsingThisItem->attackChange((int)((100 - attackPower)*1.5));
+                cout << "You now have: " << (int)((100 - attackPower)*1.5) << "attack from the" << itemName << "!" << endl;
+        	}else{
+            		cout << "Cannot use this item like this." << endl;
+        	}
+	}
+};
+
 // // class Sword_Upgrade: public Item { // permanently increase dmg by flat amt
 //
 // // };
