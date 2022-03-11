@@ -6,7 +6,7 @@
 #include <string>
 
 class Enemy: public Character {
-    /* Do we even need this? */
+    
 };
 
 class Archmage: public Enemy {
@@ -15,7 +15,7 @@ class Archmage: public Enemy {
         ~Archmage();
     
         void attack(Character* p) {
-            p->healthChange(this->getAttack());
+            p->healthChange(-this->getAttack());
         }
 };
 
