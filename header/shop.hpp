@@ -77,7 +77,7 @@ public:
 class Strength_Potion : public Item
 {
 private:
-	string itemName = "Strength Potion"; //multiply player dmg by 1.5 for entire round
+	string itemName = "Strength Potion"; //times player dmg by 1.5 for entire round
 public:
 	~Strength_Potion() {
 		/* ... */
