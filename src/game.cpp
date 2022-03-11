@@ -200,13 +200,6 @@ void Game::quitGamePrompt() {
 	}
 }
 
-void Game::loadStories(){
-    /* *** LOAD WITH STORIES *** */
-    listOfStories.push_back(new Event(true, "You spot a group of enemies, clearly guarding something valuable.", "You walk silently past them, not attracting any attention to your presence.", "You retrieve what they were hiding, and take it for yourself.", "Avoid the enemies", "Charge the enemies", "You charge at the enemies, and they prepare for battle!", player));
-    listOfStories.push_back(new Event(true, "You see a gold chest, sitting alone in a room.", "You walk away from the chest, unsure if it is a trap.", "After defeating them, you open the chest and take what’s inside.", "Walk away", "Open the chest", "You go to open the chest, but are ambushed by a group of enemies!", player));
-    listOfStories.push_back(new Event(false, "You see a wooden chest, sitting alone in a room.", "You walk away from the chest, unsure if it is a trap.", "You open the chest, and find an item!.", "Walk away", "Open the chest", "", player));
-}
-
 void Game::runGame(){
     cout << endl;
     cout << "You leave your village on a quest to rid the world of the evil final four archmages who has been terrorizing the lands\nand oppressing the people with their wicked magic for as long as you can remember. With your expert skills,\nyou are sure you can finally stop them. You set off on the road, walking to the sorcerer’s dark castle, until you\ncome across something." << endl << endl;
