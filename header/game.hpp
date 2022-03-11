@@ -7,6 +7,52 @@
 #include <string>
 #include <vector>
 
+class Event {
+    private:
+        bool isBattle;
+        int eventDecision;
+        std::string eventStoryBeginning;
+        std::string eventStoryEnd;
+        std::string eventStoryEndAlt;
+        std::string op1Text;
+        std::string op2Text;
+        std::string battleText;
+        Character* player;
+        std::vector<string> listOfNames;
+        bool userLost;
+    public:
+          Event(bool isb, std::string begin, std::string end, std::string alt, std::string op1, std::string op2, std::string bt, Character* user) {
+              isBattle = isb;
+              eventStoryBeginning = begin;
+              eventStoryEnd = end;
+              eventStoryEndAlt = alt;
+              op1Text = op1;
+              op2Text = op2;
+              battleText = bt;
+              player = user;
+              userLost = false;
+          }
+	void startEvent(){
+              std::cout << eventStoryBeginning; /* make sure string ends with \n */
+              std::cout << std::endl << std::endl;
+              std::cout << "What would you like to do?" << std::endl;
+              std::cout << "1 - " << op1Text << std::endl << "2 - " << op2Text << std::endl;
+              bool validInputTaken = false;
+              while (!validInputTaken) {
+                  std::cout << ">> ";
+                  std::cin >> eventDecision;
+                  if (eventDecision == 1 || eventDecision == 2) {
+                      validInputTaken = true;
+                  } else {
+                      std::cout << "Please input either 1 or 2." << std::endl;
+                  }
+              }
+	}
+		bool gameResult(){
+              return userLost;
+          }
+};
+
 class Game {
 	private:
     	char mainMenuChoice;
@@ -53,51 +99,6 @@ class Game {
 		}
 };
 
-class Event {
-    private:
-        bool isBattle;
-        int eventDecision;
-        std::string eventStoryBeginning;
-        std::string eventStoryEnd;
-        std::string eventStoryEndAlt;
-        std::string op1Text;
-        std::string op2Text;
-        std::string battleText;
-        Character* player;
-        std::vector<string> listOfNames;
-        bool userLost;
-    public:
-          Event(bool isb, std::string begin, std::string end, std::string alt, std::string op1, std::string op2, std::string bt, Character* user) {
-              isBattle = isb;
-              eventStoryBeginning = begin;
-              eventStoryEnd = end;
-              eventStoryEndAlt = alt;
-              op1Text = op1;
-              op2Text = op2;
-              battleText = bt;
-              player = user;
-              userLost = false;
-          }
-	void startEvent(){
-              std::cout << eventStoryBeginning; /* make sure string ends with \n */
-              std::cout << std::endl << std::endl;
-              std::cout << "What would you like to do?" << std::endl;
-              std::cout << "1 - " << op1Text << std::endl << "2 - " << op2Text << std::endl;
-              bool validInputTaken = false;
-              while (!validInputTaken) {
-                  std::cout << ">> ";
-                  std::cin >> eventDecision;
-                  if (eventDecision == 1 || eventDecision == 2) {
-                      validInputTaken = true;
-                  } else {
-                      std::cout << "Please input either 1 or 2." << std::endl;
-                  }
-              }
-	}
-		bool gameResult(){
-              return userLost;
-          }
-};
 
 #endif
 

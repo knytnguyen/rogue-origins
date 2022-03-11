@@ -10,8 +10,7 @@ Game::Game() {
     currentPlayer = 0;
 }
 
-Game::~Game() {
-}
+//Game::~Game() {}
 
 void Game::mainMenu() {
     cout << "╔══════════════════════════════════ Rogue Origins ══════════════════════════════════╗" << endl;
