@@ -326,5 +326,6 @@ void Game::playerBattleInterface() {
         	}
 	    }
     }
+    delete finalBoss;
 }
 

@@ -12,7 +12,7 @@ class Enemy: public Character {
 class Archmage: public Enemy {
     public:
         Archmage() {this->healthPoints = 200; this->attackPower = 15;}
-        ~Archmage();
+        // ~Archmage();
     
         void attack(Character* p) {
             p->healthChange(-this->getAttack());
