@@ -4,6 +4,7 @@
 #include "../header/shopItem.hpp"
 #include "../header/PurchaseStrategy.hpp"
 #include "../header/game.hpp"
+#include "../src/game.cpp"
 
 using namespace std;
 

@@ -1,11 +1,12 @@
 #include "../header/player.hpp"
+#include "../header/character.hpp"
 
 #include <iostream>
 using namespace std;
 
 Player::Player() {
-    	name = "NONE";
-    	playerLevel = 1;
+    name = "NONE";
+    playerLevel = 1;
 	healthPoints = 0;
 	attackPower = 0;
 	defense = 0;
@@ -16,39 +17,39 @@ Player::~Player(){
 }
 
 void Player::createInitialPlayer(string name) {
-    	this->name = name;
-    	this->playerLevel = 1;
+    this->name = name;
+    this->playerLevel = 1;
 	this->healthPoints = 0;
 	this->attackPower = 0;
 	this->defense = 0;
-    	this->coins = 0;
+    this->coins = 0;
 }
 
 void Player::initializeEasy(string name) {
-    	this->name = name;
-    	this->playerLevel = 1;
+    this->name = name;
+    this->playerLevel = 1;
 	this->healthPoints = 100;
 	this->attackPower = 25;
 	this->defense = 10;
-    	this->coins = 1000;
+    this->coins = 1000;
 }
 
 void Player::initializeMedium(string name) {
 	this->name = name;
-        this->playerLevel = 1;
-        this->healthPoints = 75;
-        this->attackPower = 20;
+    this->playerLevel = 1;
+    this->healthPoints = 75;
+    this->attackPower = 20;
 	this->defense = 7;
-        this->coins = 750;
+    this->coins = 750;
 }
 
 void Player::initializeHard(string name) {
 	this->name = name;
-        this->playerLevel = 1;
-        this->healthPoints = 50;
-        this->attackPower = 15;
+    this->playerLevel = 1;
+    this->healthPoints = 50;
+    this->attackPower = 15;
 	this->defense = 5;
-        this->coins = 500;
+    this->coins = 500;
 }
 
 void Player::attack(Character*) {
