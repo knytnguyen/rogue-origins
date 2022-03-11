@@ -64,8 +64,6 @@ class Game {
 		bool playerMenuStatus;
 
 		bool finalBattleStatus;
-    		vector<Player> playableCharacter;
-    		int currentPlayer;
 
     	vector<Player> playableCharacter;
     	int currentPlayer;

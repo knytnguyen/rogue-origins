@@ -110,7 +110,7 @@ void Game::selectDifficulty() {
         cout << "Good luck and safe journeys, " << this->playableCharacter[currentPlayer].getName() << "." << endl;
         cout << endl;
         this->playableCharacter[currentPlayer].initializeEasy(this->playableCharacter[currentPlayer].getName());
-	archmageBattle();	
+	    runGame();	
         break;
     case '2':
         cout << endl;
@@ -118,7 +118,7 @@ void Game::selectDifficulty() {
         cout << "Good luck and safe journeys, " << this->playableCharacter[currentPlayer].getName() << "." << endl;
         cout << endl;
         this->playableCharacter[currentPlayer].initializeMedium(this->playableCharacter[currentPlayer].getName());
-        archmageBattle();
+        runGame();
 	break;
     case '3':
         cout << endl;
@@ -126,7 +126,7 @@ void Game::selectDifficulty() {
         cout << "Good luck, " << this->playableCharacter[currentPlayer].getName() << ", you're gonna need it..." << endl;
         cout << endl;
         this->playableCharacter[currentPlayer].initializeHard(this->playableCharacter[currentPlayer].getName());
-        archmageBattle();
+        runGame();
 	break;
     default:
         cout << endl;
@@ -195,74 +195,6 @@ void Game::quitGamePrompt() {
 	}
 }
 
-
-void Game::archmageBattle() {
-	finalBattleStatus = true;
-	cout << endl;
-	cout << "The Archmage has appeared! Get ready for the battle!" << endl;
-	// while (finalBattleStatus) {
-	//	playerBattleInterface();				
-	// }
-	playerBattleInterface(); 
-}
-
-void Game::playerBattleInterface() {
-	Archmage* finalBoss = new Archmage();
-	Player* ptrToPlayer = &playableCharacter[currentPlayer];
-	while (finalBattleStatus) {
-	char battleChoice;
-        cout << endl;
-        cout << "Battle Interface" << endl;
-        cout << "[A] - Attack" << endl;
-        cout << "[M] - Open Menu" << endl << endl;
-        // cout << "What would you like to do?: ";
-        // cout << endl;
-	
-        if (finalBoss->getHealth() <= 0) {
-                cout << "You have defeated the Archmage!" << endl;
-                cout << "Congrats, you have beaten the game!" << endl;
-                finalBattleStatus = false;
-                gameStatus = false;
-        }
-	else if (playableCharacter[currentPlayer].getHealth() <= 0) {
-		cout << "GAME OVER" << endl;
-		cout << playableCharacter[currentPlayer].getName() << " has been slain by the Archmage!" << endl;
-		finalBattleStatus = false;
-		gameStatus = false;
-	}
-
-	else {
-	cout << "What would you like to do?: ";
-        cin >> battleChoice;
-	cout << endl;
-
-        switch(battleChoice) {
-        	case 'A':
-        	case 'a':
-                	playableCharacter[currentPlayer].attack(finalBoss);
-                	cout << endl;
-                	cout << this->playableCharacter[currentPlayer].getName() << " deals a whopping " << this->playableCharacter[currentPlayer].getAttackPower() << " damage to the Archmage." << endl;
-                	cout << "The Archmage is left with: " << finalBoss->getHealth() << " HP." << endl;
-			cout << endl;
-			cout << endl;
-        		finalBoss->attack(ptrToPlayer);
-        		cout << "Oh no!" << endl;
-        		cout << "The Archmage attacks, dealing an immense " << finalBoss->getArchmageAttackPower() << " damage to " << ptrToPlayer->getName() << "!" << endl;
-        		cout << this->playableCharacter[currentPlayer].getName() << " has " << ptrToPlayer->getHealth() << " HP remaining." << endl;
-                	break;
-        	case 'M':
-        	case 'm':
-                	playerMenuStatus = true;
-                	while(playerMenuStatus) {
-                        	playerMenu();
-                	}
-                	break;
-        	default:
-                	cout << "Please select a valid option. (A, M)" << endl;
-        	}
-	}
-	}
-
 void Game::runGame(){
     cout << endl;
     cout << "You leave your village on a quest to rid the world of the evil final four archmages who has been terrorizing the lands\nand oppressing the people with their wicked magic for as long as you can remember. With your expert skills,\nyou are sure you can finally stop them. You set off on the road, walking to the sorcerer’s dark castle, until you\ncome across something." << endl << endl;
@@ -323,5 +255,76 @@ void Game::runGame(){
     }
 
     //run Archmage Fight Here
-    cout << "CONGRATULATIONS! YOU HAVE BEAT THE BOSS" << endl;
+    archmageBattle();
 }
+
+
+
+void Game::archmageBattle() {
+	finalBattleStatus = true;
+	cout << endl;
+	cout << "The Archmage has appeared! Get ready for the battle!" << endl;
+	// while (finalBattleStatus) {
+	//	playerBattleInterface();				
+	// }
+	playerBattleInterface(); 
+}
+
+void Game::playerBattleInterface() {
+	Archmage* finalBoss = new Archmage();
+	Player* ptrToPlayer = &playableCharacter[currentPlayer];
+	while (finalBattleStatus) {
+	char battleChoice;
+        cout << endl;
+        cout << "Battle Interface" << endl;
+        cout << "[A] - Attack" << endl;
+        cout << "[M] - Open Menu" << endl << endl;
+        // cout << "What would you like to do?: ";
+        // cout << endl;
+	
+        if (finalBoss->getHealth() <= 0) {
+                cout << "You have defeated the Archmage!" << endl;
+                cout << "Congrats, you have beaten the game!" << endl;
+                finalBattleStatus = false;
+                gameStatus = false;
+        }
+	else if (playableCharacter[currentPlayer].getHealth() <= 0) {
+		cout << playableCharacter[currentPlayer].getName() << " has been slain by the Archmage!" << endl;
+        cout << "GAME OVER" << endl;
+		finalBattleStatus = false;
+		gameStatus = false;
+	}
+
+	else {
+	cout << "What would you like to do?: ";
+        cin >> battleChoice;
+	cout << endl;
+
+        switch(battleChoice) {
+        	case 'A':
+        	case 'a':
+                	playableCharacter[currentPlayer].attack(finalBoss);
+                	cout << endl;
+                	cout << this->playableCharacter[currentPlayer].getName() << " deals a whopping " << this->playableCharacter[currentPlayer].getAttackPower() << " damage to the Archmage." << endl;
+                	cout << "The Archmage is left with: " << finalBoss->getHealth() << " HP." << endl;
+			cout << endl;
+			cout << endl;
+        		finalBoss->attack(ptrToPlayer);
+        		cout << "Oh no!" << endl;
+        		cout << "The Archmage attacks, dealing an immense " << finalBoss->getArchmageAttackPower() << " damage to " << ptrToPlayer->getName() << "!" << endl;
+        		cout << this->playableCharacter[currentPlayer].getName() << " has " << ptrToPlayer->getHealth() << " HP remaining." << endl;
+                	break;
+        	case 'M':
+        	case 'm':
+                	playerMenuStatus = true;
+                	while(playerMenuStatus) {
+                        	playerMenu();
+                	}
+                	break;
+        	default:
+                	cout << "Please select a valid option. (A, M)" << endl;
+        	}
+	    }
+    }
+}
+
