@@ -47,6 +47,10 @@ This is an interesting and important project for us because it gives us the oppo
  > 
  >![](images/story%20introduction.png)
 
+ > ***Finishing Attack:***
+ > 
+ > ![](images/finishing%20attack.png)
+
 
  ## Installation/Usage
  > Rogue Origins will be ran through PuTTY through the terminal emulator serial console. To check for test cases, it will be using CMake to compile and test those specific values in the game. After cloning the files into PuTTY, one needs to compile the program using CMake by typing these commands in order: 
