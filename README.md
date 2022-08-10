@@ -71,7 +71,7 @@ This is an interesting and important project for us because it gives us the oppo
  
 
 
-# ~~Deletable Instructions Below~~
+# Full Project Instructions Below
 
 
 
