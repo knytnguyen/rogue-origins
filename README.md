@@ -39,9 +39,9 @@ This is an interesting and important project for us because it gives us the oppo
  >
  ><img src="https://cdn.discordapp.com/attachments/935084367720624168/951776092514025582/unknown.png" width="10000" height="550">
 
- > ***Gameplay:***
+ > ***Instructions:***
  > 
- >>![Gameplay RO](https://cdn.discordapp.com/attachments/279448838245187584/951847761618280588/unknown.png)
+ >![](images/instructions.png)
 
 
  ## Installation/Usage
