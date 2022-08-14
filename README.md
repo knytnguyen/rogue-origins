@@ -5,13 +5,13 @@
  
 ## Project Description
 
-> Rogue Origins is a text-based role-playing game (RPG) where the player controls their virtual character through a virtual world. Set in a medieval time with fantasy characters, enemies, and weapons, the player progresses through the world of Rohendel with the end goal of defeating the four bosses that terrorize the continent. 
+> Rogue Origins is a text-based role-playing game (RPG) where the player controls their personally defined character through a virtual world. Set in a medieval time with fantasy characters, enemies, and weapons, the player progresses through the world of Rohendel with the end goal of defeating the four bosses that terrorize the continent. 
 This is an interesting and important project for us because it gives us the opportunity to implement a program that gives the players opportunities to explore through a narrative while exploring and strengthening our fundamentals such as data structures, algorithms, and system design skills. Creating a text-based RPG in C++ allows us to not only formulate how to design and integrate many different moving pieces together, but it also allows us to create a narrative and express ourselves creatively for others to explore as well which is why this project is so interesting for us. 
 
 > For our game, we plan to use the following languages and tools that have been learned throughout this class.
 * C++ - Programming Language
 * Git – The version control software to accelerate collaboration and handle files
-* Github – Online Repository Storage and File Hosting Service
+* GitHub – Online Repository Storage and File Hosting Service
 * PuTTY – Client and Terminal
 * CMake – Software Compiler, Tester, and Builder
 * Vim – Text Editor for PuTTY
